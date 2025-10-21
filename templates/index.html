@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lista de Usuários</title>
+</head>
+<body>
+  <h2>Usuários</h2>
+
+  <form method="post" action="/add">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <ul>
+  {% for u in usuarios %}
+    <li>{{ u.nome }}</li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
